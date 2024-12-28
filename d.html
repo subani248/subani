@@ -1,0 +1,163 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Student Login</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta content="" name="description" />
+		<meta content="" name="author" />
+		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="vendor/themify-icons/themify-icons.min.css">
+		<link href="vendor/animate.css/animate.min.css" rel="stylesheet" media="screen">
+		<link href="vendor/perfect-scrollbar/perfect-scrollbar.min.css" rel="stylesheet" media="screen">
+		<link href="vendor/switchery/switchery.min.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" href="assets/css/styles.css">
+		<link rel="stylesheet" href="assets/css/plugins.css">
+		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
+
+
+		 <script type="text/javascript">
+
+function v()
+{
+	  var regex = /^[A-Za-z0-9]+$/
+		          var isValid = regex.test(document.form1.username.value);
+	   var isValid1 = regex.test(document.form1.password.value);
+
+
+	if(document.form1.username.value=="")
+	{
+		alert("Enter User name");
+		document.form1.username.focus();
+		return false;
+	}
+	else  if (!isValid) {
+            alert("Contains Special Characters. Please enter Only Alphabets and Numbers ");
+			document.form1.username.focus();
+document.form1.username.value='';
+		return false;
+        }
+	else if(document.form1.password.value=="")
+	{
+		alert("Enter Password");
+		document.form1.password.focus();
+		return false;
+	}
+	else  if (!isValid1) {
+            alert("Contains Special Characters. Please enter Only Alphabets and Numbers ");
+			document.form1.password.focus();
+document.form1.password.value='';
+		return false;
+        }
+
+}
+
+
+
+function ff()
+{
+	  var regex = /^[A-Za-z0-9]+$/
+		          var isValid = regex.test(document.form1.username.value);
+	
+	if(document.form1.username.value=="")
+	{
+		alert("Enter User name");
+		document.form1.username.focus();
+		return false;
+	}
+	else  if (!isValid) {
+            alert("Contains Special Characters. Please enter Only Alphabets and Numbers ");
+			document.form1.username.focus();
+document.form1.username.value='';
+		return false;
+        }
+else
+{
+form1.submit();
+}
+}
+
+</script>
+	</head>
+	<body class="login">
+		<div class="row">
+			<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+				<div class="logo margin-top-30">
+				<h2>Student Module</h2>
+				<h4><font color='red'>Note : User Name & Password (Acceptable characters : A-Z, a-z & 0-9)</font></h4>
+				</div>
+
+				<div class="box-login">
+					<form  method="post" action="index.php" name="form1">
+						<fieldset>
+							<legend>
+								Sign in to your account
+							</legend>
+							<p>
+								Please enter your username and otp to log in.<br />
+								<span style="color:red;"></span>
+							</p>
+							<div class="form-group">
+						
+									<font color='blue'>Register No</font><input type="text" class="form-control" name="username" value="" >
+								<input type="submit" name="otpp" value="Generate OTP" onclick="ff()" >
+
+									
+							</div>
+							<div class="form-group form-actions">
+							
+									<font color='blue'>OTP</font><input type="password" class="form-control password" name="password" placeholder="OTP" >
+									
+							</div>
+							<div class="form-actions">
+								
+								<button type="submit" class="btn btn-primary pull-right" name="submit" onclick="return v()">
+									Login <i class="fa fa-arrow-circle-right"></i>
+								</button>
+							</div>
+							
+						</fieldset>
+					</form>
+
+					<div class="copyright">
+						&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> VFSTR </span>. <span>All rights reserved</span>
+					</div>
+			
+				</div>
+
+			</div>
+		</div>
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="vendor/modernizr/modernizr.js"></script>
+		<script src="vendor/jquery-cookie/jquery.cookie.js"></script>
+		<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+		<script src="vendor/switchery/switchery.min.js"></script>
+		<script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+	
+		<script src="assets/js/main.js"></script>
+
+		<script src="assets/js/login.js"></script>
+		<script>
+			jQuery(document).ready(function() {
+				Main.init();
+				Login.init();
+			});
+
+			
+		</script>
+
+
+
+
+	
+	</body>
+	<!-- end: BODY -->
+</html>
